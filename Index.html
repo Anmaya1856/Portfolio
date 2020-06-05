@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Anmaya Agarwal</title>
+	<style>
+		body {
+			margin:0;
+			/*background-color: black;*/
+			background-image: url("Images/Matte black.jpg");
+			background-size: 100%;
+			color: #d80032}
+		
+		html {
+			scroll-behavior: smooth;}
+		
+		.content {
+			margin-top: 0%;
+			text-align: center;
+			background-color: black;
+			overflow: auto;}
+		
+		.background_image{
+			background-image: url("Images/Matte black.jpg");
+			background-size: 100%;
+			z-index: 900;
+		}
+		
+		@media screen and (max-width: 600px) {
+			body{
+				overflow-x: auto;
+			}
+		}
+		
+		
+
+/* --------------------- Navigation Bar -----------------------------*/		
+		
+		.navbar {
+			overflow: hidden;
+			background-color:/*#22223B*/ /*#1b1b2f*/ #d80032;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 100;}
+
+		.navbar a {
+			float: right;
+		  	display: block;
+		  	color: #c9ada7; 
+		  	text-align: center;
+		  	/*padding: 29px 25px;*/
+			padding: 2% 1.7%;
+		  	text-decoration: none;
+		  	/*font-size: 20px;*/
+			font-size: 1.25vw;
+			color: #000000;
+			background-color: /*#22223B*/ /*#1b1b2f;*/ #d80032}
+		
+		.navbar h1 {
+			border: medium;
+			display: block;
+			float: left;
+		  	display: block;
+		  	color: /*#c9ada7*/ black;
+		  	text-align: center;
+		  	/*padding: 0px 60px;*/
+			font-size: 2.2vw;
+			padding: 0% 2.5%;
+			background-color: /*#22223B*/ /*#1b1b2f;*/ #d80032}
+
+		.navbar a:hover {
+			text-decoration: underline;
+			text-decoration-color: white;
+			transition: 0.5s;
+			/*background-color: aqua;*/}
+		
+		@media screen and (max-width: 600px) {
+			.navbar{
+				width: 100%;
+			}
+			.navbar a{
+				font-size:10px;
+				padding: 3.4% 2%;}
+			.navbar h1{
+				font-size: 13px;
+				padding: 1% 2%;
+			}
+		}
+		
+/*----------------------- Home Page (Hero Image) ----------------------*/		
+
+		.main {
+			padding: 0px 0px;
+			margin-top: 0px;
+			display: inline-block;
+			/*background-size: 100%;
+			background-image: url("Images/Matte black.jpg");*/
+		  /*height: 1500px;*/}
+		
+		.text{
+			position:absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-150%,-50%);
+			/*bottom: 15px;
+			left: 30px;*/
+			color: #d80032;
+			font-size: 4vw;
+			opacity: 0;
+			/*z-index: 10*/;
+		}
+		
+		.main img{
+			max-width: 100%;
+			height: auto;
+			margin-top: -70px;
+			filter: blur(0px);
+		}
+		
+		.main:hover .text{
+			opacity: 1;
+			transition-delay: 1.5s;
+			transition: 0.5s;}
+		
+		.main img:hover{
+			opacity: 0.7;
+			filter: blur(2px);
+			transition-delay: 1s;
+			transition: 0.5s;}
+		
+		@media screen and (max-width: 600px) {
+			.text{
+				font-size:17px;
+				position:absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);}
+			.main img{
+				width: 100%;
+				height: auto;}
+		}
+		
+		
+/*------------------------- About ----------------------------*/		
+		
+		.main2 {
+			/*padding: 65px 10px;*/
+			padding: 5% 1%;
+			align: center;
+			margin-top: 0%;
+			overflow: auto;
+			background-image: url("Images/Matte black.jpg");
+			background-size: 100%;
+		  /*height: 1500px;
+			z-index: 15;*/}
+		
+		.main2 p{
+			text-align:justify;
+			/*font-size: 19px;*/
+			font-size: 1.4vw;
+			width: 60%;
+			display: block;
+			line-height: 1.7;
+			margin-left: auto;
+			margin-right: auto;}
+		
+		.main2 h1{
+			font-size: 2.5vw;
+			text-decoration: underline;
+			font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";}
+		
+		@media screen and (max-width: 600px) {
+			.main2 p{
+				font-size: 13px;
+				width: 70%;
+			}
+		}
+
+/*------------------------- Achievements ----------------------------*/		
+		
+		.main3 {
+			/*padding: 65px 10px;*/
+			padding: 5% 1%;
+			/*height: 400px;*/
+			align: center;
+			/*margin-top: 10px;*/
+			background-image: url("Images/Matte black.jpg");
+			background-size: 100%;
+			margin-top: 0%;}
+		
+		.main3 ul{
+			text-align: justify;
+			/*font-size: 19px;*/
+			font-size: 1.4vw;
+			width: 90%;
+			display:block;
+			color: orange;
+			margin-left: auto;
+			margin-right: auto}
+		
+		.main3 li{
+			/*margin: 10px 0px;*/
+			margin: 1% 0%;
+			font-size: 1.3vw;
+			line-height: 1.2;}	
+		
+		.main3 h1{
+			color: orange;
+			font-size: 2.5vw;
+			text-decoration: underline;
+			font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";}
+		
+		.main3 h2{
+			color: orange;}
+		
+		.column ul{
+			text-align: justify;
+			font-size: 19px;
+			width: 90%;
+			display:block;
+			color: orange;
+			margin-left: auto;
+			margin-right: auto}
+		
+		.column li{
+			margin: 10px 0px;
+			align-content: center;}
+		
+		.column h1{
+			color: orange;}
+		
+		.column h2{
+			color: orange;
+			font-size: 2vw;}
+		
+		.column{
+			float: left;
+			width: 32%;
+			padding: 5px;
+			align-content: center;}
+		
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;}
+		
+		/*.column1of3{
+			float: left;
+			width: 32%;
+			padding: 5px;}
+		
+		.column2of3{
+			float: left;
+			width: 32%;
+			padding: 5px;}
+		
+		.column3of3{
+			float: left;
+			width: 32%;
+			padding: 5px;}*/
+		
+		@media screen and (max-width: 600px) {
+		  .column {
+			width: 70%;
+			  padding: 1%;
+			  font-size:13px;
+			  align-content: center;
+		  }
+			.column ul{
+				font-size:13px;
+			}
+			.column li{
+				margin: 10px 0px;
+				font-size:13px;
+				margin-left: -20px;
+				margin-right: 20px;
+			}
+		}
+		
+/*------------------------- Portfolio ----------------------------*/
+		
+		.main4 {
+			/*padding: 65px 10px;*/
+			padding: 5% 1%;
+			align: center;
+			display: block;
+			background-image: url("Images/Matte black.jpg");
+			background-size: 100%;
+			/*margin-top: 10px;*/}
+		
+		.main4 h1{
+			clear: left;
+			color: #29a19c;
+			font-size: 2.5vw;
+			text-decoration: underline;
+			font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";}
+		
+		.main4 iframe{
+			overflow: auto;
+			margin: auto;
+			width: 35vw;
+			height: 19.69vw;
+			
+			/*padding: 2% 6%;
+			display: grid;
+			grid-template: auto auto auto auto / auto auto; 
+			width: auto;
+			height: auto;*/
+		}
+		
+		.column2{
+			float: left;
+			width: 48%;
+			padding: 1%;
+	
+			/*padding: 15px 0px;*/}
+		
+		@media screen and (max-width: 600px) {
+			/*.main4 iframe{
+				height: auto;
+				width: 100%;}*/
+			.column2 {
+			width: 100%;
+				
+		  }
+			.column {
+			width: 100%;
+				height: auto;
+		  }
+			
+		}
+		
+/*------------------------- Experience ----------------------------*/		
+		
+		.main5 {
+			/*padding: 65px 10px;*/
+			padding: 5% 1%;
+			align: center;
+			background-image: url("Images/Matte black.jpg");
+			background-size: 100%;
+			/*margin-top: 10px;*/
+			margin-top: 1%;
+			color: #0be881;
+		}
+		
+		.main5 h1{
+			color: #0be881;
+			font-size: 2.5vw;
+			text-decoration: underline;
+			font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";}
+		
+		.main5 h2{
+			font-size: 2vw;}
+		
+		.column3{
+			float: left;
+			width: 40%;
+			padding: 5px;}
+		
+		.column3 img{
+			margin: auto;
+			object-fit:cover;
+		}
+		
+		.column4{
+			float: left;
+			width: 48%;
+			margin: 0% 5%;
+			padding: 5px;}
+		
+		.column4 p{
+			/*font-size: 19px;*/
+			font-size: 1.4vw;
+			line-height: 1.7;
+			margin-left: auto;
+		margin-right: auto;}
+		
+		@media screen and (max-width: 600px) {
+		  .column4 {
+			width: 90%;
+			  padding: 1%;
+			  align-content: center;
+				overflow-x: hidden;}
+			
+			.column4 p{
+				width: 100%;
+				font-size: 13px;
+			}
+			
+			.column3 {
+			width: 100%;
+			  padding: 1%;
+			  align-content: center;
+			overflow-x: hidden;}
+		}
+		
+/*------------------------- Footer ----------------------------*/		
+		
+		.footer {
+			overflow: auto;
+			position:relative;
+			font-size: 1.2vw;
+			/*left: 0;
+			bottom: 0;*/
+			margin: 0;
+			height: auto;
+			width: 100%;
+			background-color: red;
+			color: black;
+			font-weight: 1000;
+			text-align: center;}
+		
+		@media screen and (max-width: 600px) {
+		  .footer {
+			width: 100%;
+			  align-content: center;
+				overflow-x: hidden;}
+		}
+		
+		
+	</style>
+</head>
+<body background="Images/Matte black.jpg">
+
+	<!--------------- Navigation Bar ------------------------->
+	
+	<div class="navbar" id="navbar">
+		<h1>Anmaya Agarwal</h1>
+		<a href="#experience"><strong>Experience</strong></a>
+  	  	<a href="#portfolio"><strong>Portfolio</strong></a>
+		<a href="#achievements"><strong>Achievements</strong></a>
+		<a href="#about"><strong>About</strong></a>
+		<a href="#home"><strong>Home</strong></a>
+	</div>
+
+	<div class="content">
+		<!--------------- Home Page (Hero Image) ------------------------->
+		
+		<div class="main" id="home">
+			<!--<img src="Images/Main Building.jpg" alt="Main Building" width="100%" height="60%"> -->
+			<img src="Images/Hero Image 2.jpg" alt="Main uilding Top Photo" width="100%">
+			<div class="text">Anmaya Agarwal</div>
+		</div>	
+
+		<!--------------- About ------------------------->
+
+		<div class="main2" id="about">
+			<h1 align="center">ABOUT</h1>
+			<p align="justify">My name is Anmaya Agarwal. I am currently pursuing my Bacherlor's in Computer Engineering from Mumbai. I have completed my high school from Mayo College, Ajmer one of the most prestigious boarding schools in India. I am fluent in several computer languages and like to solve problems and make websites. Apart from that I love watching TV Shows and editing videos for YouTube. When I am not spending time on the computer I like to play sports and read novels. I believe in breaking free from my comfort zones one after another, and continually escaping monotony.</p>
+		</div>
+
+		<!--------------- Achievements ------------------------->
+
+		<div class="main3" id="achievements">
+			<div class="row">
+				<div class="column">
+				</div>
+				<div class="column" >
+					<h1>ACHIEVEMENTS</h1>
+				</div>
+				<div class="column">
+				</div>
+			</div>
+			<div class="row">
+				<div class="column">
+					<h2 align="center">SPORTS</h2>
+					<ul>
+						<li>Participated in National, State and Inter Public School Conference squash tournaments.</li>
+						<li>Secured second position in Inter Public School Conference Taekwondo in high school.</li>
+						<li>Participated in district level karate championship.</li>
+						<li>Awarded sports scholarship in squash and taekwondo in high school.</li>
+					</ul>
+				</div>
+				<div class="column">
+					<h2 align="center">ACADEMICS</h2>
+					<ul>
+						<li>Completed 5 courses on Python from the University of Michigan using Coursera.</li>
+						<li>Secured 10 CGPA in the Class 10 board examinations.</li>
+						<li>Secured 3.8 GPA in the 1st year of Engineering.</li>
+						<li>Completed an intensive course in French at CIEL Bretagne, France.</li>
+						<li>Participated in French Olympiad.</li>
+					</ul>
+				</div>
+				<div class="column">
+					<h2 align="center">EXTRA-CURRICULAR</h2>
+					<ul>
+						<li>President of the Mayo College, Ajmer Computer Society.</li>
+						<li>Selected for the National level of Microsoft Office Specialist PowerPoint competition.</li>
+						<li>Participated in Inter Public School Conference IT Fest and Suryodaya IT Fest in high school.</li>
+						<li>Participated in a Student Exchange Programme at Lycée Guy Mollet, school in Arras, France.</li>
+						<li>Participated in the Doom School Model United Nation Conference.</li>
+						<li>Editor in Chief of the film making society of Mayo College, Ajmer.</li>
+						<li>Member of a team that made a hyper-lapse video of Mayo College which has garnered over 14,000 views on YouTube.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!--------------- Portfolio ------------------------->
+		
+		<!--<div class="main4" id="portfolio">
+			<div class="row">
+				<div class="column">
+				</div>
+				<div class="column" >
+					<h1>PORTFOLIO</h1>
+				</div>
+				<div class="column">
+				</div>
+			</div>
+			<div class="row">
+				<div class="column2">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/d7gGkh8JuiI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="column2">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/AHnxtkhm5uw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column2">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/zE7wGEUkas4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="column2">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/e5p8V5p2VJs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column2">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/RrXQYMZ67lk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="column2">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/XmZegflEZhk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>-->
+		
+		<div class="main4" id="portfolio">
+			<div class="row">
+				<div class="column">
+				</div>
+				<div class="column" >
+					<h1>PORTFOLIO</h1>
+				</div>
+				<div class="column">
+				</div>
+			</div>
+			<div class="row">
+				<div class="column2">
+					<iframe width="500" height="280px" src="https://www.youtube.com/embed/d7gGkh8JuiI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="column2">
+					<iframe width="560px" height="315px" src="https://www.youtube.com/embed/AHnxtkhm5uw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column2">
+					<iframe width="560px" height="315px" src="https://www.youtube.com/embed/zE7wGEUkas4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="column2">
+					<iframe width="560px" height="315px" src="https://www.youtube.com/embed/e5p8V5p2VJs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column2">
+					<iframe width="560px" height="315px" src="https://www.youtube.com/embed/RrXQYMZ67lk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="column2">
+					<iframe width="560px" height="315px" src="https://www.youtube.com/embed/XmZegflEZhk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+		
+		<!--------------- Experience ------------------------->
+		<div class="main5" id="experience">
+			<div class="row">
+				<div class="column">
+				</div>
+				<div class="column" >
+					<h1>EXPERIENCE</h1>
+				</div>
+				<div class="column">
+				</div>
+			</div>
+			<div class="row">
+				<div class="column3">
+					<img src="Images/Experience2_resized_600x400.jpg" width="300px" alt="Experience 2">
+				</div>
+				<div class="column4">
+					<h2 align="center">INTERNSHIP AT IIT, GANDHINAGAR</h2>
+					<p align="justify">During my internship at IIT, Gandhinagar I worked under the Center for Creative Learning. There I designed 3-dimensional puzzles that enhace the problem solving of a person. These puzzles were designed by me on AutoCAD and made using Medium Density Fibre Sheets. I was also involved in a project that made scientific laws easier for children to understand. We made working prototypes of these laws using only MDF sheets and distributed them to over 100 schools in Gujarat. Along with 2 other people I made a working model of a Musical box using only MDF sheets. This internship helped expand my boundaries in ways I never dreamt of.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column3">
+					<img src="Images/Valnet.jpg" width="300px" alt="Experience 2">
+				</div>
+				<div class="column4">
+					<h2 align="center">VIDEO EDITOR FOR VALNET INC.</h2>
+					<p align="justify">I have been freelancing as a video editor for a Canadian company called Valent since March 2020. I have undertaken several projects that have been published by the YouTube channel CBR. These videos mainly deal with pop culture media like anime and Marvel. This experience has helped me grow as a person and given me an exposure of the coporate world.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--------------- Experience ------------------------->
+	
+	<div class="footer">
+  		<p>@Copyright Anmaya Agarwal</p>
+	</div>
+	
+	<script type="application/javascript">
+		var prevScrollpos = window.pageYOffset;
+		window.onscroll = function() {
+			var currentScrollPos = window.pageYOffset;
+	  		if (prevScrollpos > currentScrollPos) {
+				document.getElementById("navbar").style.top = "0";
+				document.getElementById("navbar").style.transitionDuration = "1s";} 	
+			else {
+				document.getElementById("navbar").style.top = "-80px";
+		  		document.getElementById("navbar").style.transitionDuration = "1s";}
+		  prevScrollpos = currentScrollPos;
+		}
+	</script>
+</body>
+</html>
